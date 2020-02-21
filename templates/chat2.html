@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% set aktiva_lapa = 'chat' %}
+
+{% block saturs %}
+
+<div class="owo">
+  <div class="c-title owo b-size">
+    <p>title</p>
+  </div>
+
+  <div class="c-content owo b-size">
+
+
+
+  </div>
+
+  <form action="/action_page.php" class="c-input owo b-size">
+    <input id="message" placeholder="Type your message here" type="text" name="s-text">
+    <button onClick="send_message();" type="button">Send</button>
+  </form>
+</div>
+
+{% endblock %}

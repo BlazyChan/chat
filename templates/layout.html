@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <head>
+    <title>Mana lapa</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul class="menu">
+
+            <li {% if aktiva_lapa == 'chat' %}
+                  class="active"
+                {% endif %}>
+                <a href="/chat">Chat</a></li>
+            <li {% if aktiva_lapa == 'home' %}
+                  class="active"
+                {% endif %}>
+                <a href="/home">Home</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      {% block saturs %}
+
+      {% endblock %}
+    </div>
+  </body>
+</html>
