@@ -8,7 +8,7 @@ def index():
 
 @app.route('/chat')
 def chat():
-  return render_template('chat.html')
+  return render_template('chat2.html')
 
 @app.route('/chats/lasi')
 def ielasit_chatu():
