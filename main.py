@@ -4,11 +4,21 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-  return render_template('chat2.html')
+  return render_template('chats.html')
 
 @app.route('/chat')
 def chat():
-  return render_template('chat2.html')
+  return render_template('chats.html')
+
+@app.route('/chat2')
+def chat2():
+  return render_template('chats2.html')
+
+
+@app.route('/health')
+def health_check():
+  return "OK"
+
 
 @app.route('/chats/lasi')
 def ielasit_chatu():
@@ -27,7 +37,7 @@ def suutiit_zinju():
     f.write(dati["chats"] + "\n")
 
   return ielasit_chatu()
-  
+
 @app.route('/home')
 def home():
   return render_template('home.html')

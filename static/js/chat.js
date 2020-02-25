@@ -28,9 +28,9 @@ function raadiChatuVienkarsi(dati) {
 /*
 Publicē tērzēšanas ziņas datus uz serveri
 */
-async function send_message() {
+async function suutiZinju() {
     // Nolasa ievades lauka saturu
-    let zinjasElements = document.getElementById("message");
+    let zinjasElements = document.getElementById("zinja");
     let zinja = zinjasElements.value;
     // izdzēš ievades lauku
     zinjasElements.value = "";
@@ -51,11 +51,11 @@ async function send_message() {
 
 // Ērtības funkcionalitāte
 // Atrod ievades lauku
-var ievadesLauks = document.getElementById("message");
+var ievadesLauks = document.getElementById("zinja");
 // Gaida signālu no klaviatūras, ka ir nospiests Enter taustiņš
 ievadesLauks.addEventListener("keyup", function(event) {
   // Numur 13 ir "Enter" taustiņš
   if (event.keyCode === 13) {
-    send_message();
+    suutiZinju();
   }
 });

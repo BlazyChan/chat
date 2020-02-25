@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% set aktiva_lapa = 'chat' %}
+
+{% block saturs %}
+
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"/>
+
+<div class="owo">
+  <div class="c_title owo b_size">
+    <p>title</p>
+  </div>
+
+  <div id="chat" class="c_content owo b_size">
+
+    <div class="owo c_me">
+      <img class="owo c_me c_profile_image" src="https://getridofthings.com/wp-content/uploads/2018/03/pets_catdandruff-900x900.jpg" alt="me_image">
+      <p>Labdien, meow!<p>
+    </div>
+    <div class="owo c_them">
+      <img class="owo c_them c_profile_image" src="https://s.hdnux.com/photos/45/25/02/9785484/3/360x0.jpg" alt="them_image">
+      <p>Nooo! Woof!</p>
+    </div>
+
+  </div>
+
+  <form action="/action_page.php" class="c_input owo b_size">
+    <input id="zinja" placeholder="Type your message here" type="text" name="s_text">
+    <button onClick="suutiZinju();" type="button">Send</button>
+  </form>
+</div>
+
+{% endblock %}
