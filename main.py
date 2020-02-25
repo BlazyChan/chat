@@ -1,19 +1,10 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, json, jsonify
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
   return render_template('chats.html')
-
-@app.route('/chat')
-def chat():
-  return render_template('chats.html')
-
-@app.route('/chat2')
-def chat2():
-  return render_template('chats2.html')
-
 
 @app.route('/health')
 def health_check():
@@ -43,4 +34,4 @@ def home():
   return render_template('home.html')
 
 if __name__ == '__main__':
-  app.run(host = '0.0.0.0', port = 5001, threaded = True, debug = True)
+  app.run(port = 5001, threaded = True, debug = True)
