@@ -6,6 +6,10 @@ app = Flask(__name__)
 def index():
   return render_template('chats.html')
 
+@app.route('/chats')
+def chats():
+  return render_template('chats.html')
+
 @app.route('/health')
 def health_check():
   return "OK"
